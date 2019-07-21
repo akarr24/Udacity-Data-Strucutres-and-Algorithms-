@@ -1,0 +1,34 @@
+Problem 1: Floored square root
+I used binary search to find the square root of the given number. Instead of using some specialized method for finding square root, I decided to find the value whose square is equal to the given number. 
+Efficiency:
+ Since the sqrt function uses the binary search, its runtime efficiency is O(log n), as it halves the number of solutions with each call to the function. The space complexity is O(1) as there are finite number of variables involved.
+
+Problem 2: Rotated array search
+I made use of binary search to find the pivot point and used that to find the required value. The idea is to divide the array in two halves, and figure out which half is sorted. Then, binary search is used to find the index of the element.
+Efficiency: 
+As we make call to binary search twice, the time complexity comes out to be O(log n + log n -1) = O(log n). The space complexity is O(n) where n is the number of memory units required to store the array elements and other fixed number of variables.
+
+Problem 3: Rearrange array digits
+The solution involves two steps. First, the array is sorted in decreasing order using quick sort Then the array is traversed and numbers are selected by multiplying the factor by 10 at every second position.
+Efficiency:
+Quicksort has an efficiency of O(nlog n) on average and we add the O(n) for traversing the array which gives the total complexity of O(nlog n + n) = O(nlog n). The space complexity is O(n) as we are only rearranging the array elements in place.
+
+Problem 4: Dutch National Flag
+The solution involves traversing the array and swapping elements such that all the 0s get concentrated in the left, all the 1s get the middle position and the 2s get in the right. The algorithm make use of pivot (variable mid in the code) and use to traverse the array and swap the values if required.
+Efficiency:
+The traversal is done once, hence the time complexity is O(n). The space complexity is O(n) as we are re-arranging the elements in place.
+
+Problem 5: Autocomplete with Tries
+Tries are implemented to store the word. The node's children are stored in dictionary that maps  every possible follow-up character to another node. The complete word is marked at the end.
+Efficiency:
+The function suffixes imparts most complexity to the code. Each node is visited once, and the list is expanded which makes the complexity of O(n). The space complexity is O(n*m), where n is the number of words in the trie and m is the longest word length.
+
+Problem 6: Unsorted Integer Array
+The array is traversed and simple comparisions are made to find the minimum and maximum value elements.
+Efficiency:
+Since the array is traversed only once, the time complexity is O(n). The space complexity again is O(n), where n is the memory units required to store the array and fixed number of elements.
+
+Problem 7: Routing with Tries
+Trie is implemented, with path elements as dict key and handler is used as the end nodes. 
+Efficiency:
+The path stripping in lookup function takes O(n) time, and the find algorithm is O(nk) where n is the longest path and k is the average number of branches. For the worst case, it has to iterate through all trie nodes and find next path element for all branches. Thus, the overall complexity is O(n + nk) = O(nk). The space complexity is O(n*m) where n iis the number of path in the trie, and m is the longest path length.

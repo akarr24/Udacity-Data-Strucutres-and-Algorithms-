@@ -1,0 +1,37 @@
+Problem 1: LRU cache
+I made use of Ordered Dictionary from python collection to implement LRU cache as it was required for the cache to hold any type of key-value pair. 
+Efficiency:
+As required, all operations take O(1) time except for the if statement in get and set method which takes O(n), where n is the length of the dictionary. As the dictionary has key and values, its space complexity will be O(k + v) = O(n)
+
+Problem 2: Find Files
+I made use of simple recursion to traverse through the file path stored in a list as the task involved repeating same task over and over again.
+Efficiency:
+The extending of list imparts most to the time complexity which takes O(k) time where k is the length of the path. As we have to store only the path, the space complexity will be O(n), where n is the length of the traversed path.
+
+Problem 3: Huffman Coding
+I made use of external sources like GeekforGeeks to better understand the huffman coding algorithm. I used a dict to store character frequencies and then turned it into a sorted list. I then made use of the sorted list to generate the huffman tree. 
+Efficiency:
+The efficiency for various functions in code is as follows:
+create_frequencies: O(n^2)
+sort_frequencies: O(n log n)
+build_huff_tree: n^2 + n log n + (n * n log n) => O(n^2 log n)
+trim_huff_tree: O(n) for tree traversal and O(n) for dict update => O(n^2)
+decode_next: O(n)
+huffman_encoding: O(n^2 log n)
+huffman_decoding: O(n^2)  
+The space complexity for encoding will be O(k) where k is the nodes in the tree and O(n) for decoding, where n is the length of the text.
+
+Problem 4: User in group
+I used recursion to traverse through the path and check the presence of user within the group. As the task involved solving same problem over and over again, it made it an excellent candidate for recursion.
+Efficiency:
+The algorithm has time complexity of O(n), as each group and user will be visited once. As the task involves finite number of variables, the space complexity will be O(n), where n is the number of variables required to store the computed values.
+
+Problem 5: Blockchain
+I made use of simple list for implementing the blockchain which allowed for simple access and addition.
+Efficiency:
+Since its a list, all operations take O(1) time. The code has a list and finite set of variables. Thus, its space complexity will be O(n), where n is the total memory units required to store the computed variables and list elements.
+
+Problem 6: List Union and Intersection:
+The problem is quite straightforward. I implemented the union and intersection functions. The union function gives a list which contains elements from both the list, however, if duplicates are present, they are removed. The intersections function outputs a list containing elements common in both list, again ignoring the duplicates.
+Efficiency:
+The union function has time complexity of O(n^2) and intersection function has time complexity of O(n^3) . As the code has finite set of variables, most of the complexity will be imparted due to the presence of two list. Thus, the space complexity will be O(n), where n is the memory required to store the elements of the lists and other variables involved.

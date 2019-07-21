@@ -1,0 +1,27 @@
+Runtime Analysis:
+
+Note: n2 represents n square.
+
+Task 0:
+Both print statements takes O(1) time.
+
+Task 1:
+Each list comprehension takes O(n) time while each for loop takes O(n2 ) time to run. Thus the total running time is O(n2).
+
+Task 2:
+ The list comprehension takes O(n) time. The zip() function takes O(n*m) time where n and m represents the length of the lists. The creation of dictionaries take O(n2) time: O(n) for the for loop and O(n) for the if statement The summing of values of both dictionaries takes O(n) time while the finding maximum value also takes O(n) time. 
+Thus the total time can be taken as O(n*m + n2 + n + n + n) 
+=> O(n*m + n2)
+as the list are of same length.
+=> O(2n2)
+=> O(n2) 
+
+Task 3:
+Part A
+There is a for loop which takes O(n) time inside which is a nested if-else block. Each if-else decision takes a constant time, thus its time complexity will be O(1). The clean_list functionality code has a for loop which contains an if statement. The for loop runs for O(n) times and the if condition while checking the not-in statement will have a time complexity of O(n). Therefore, the overall time complexity will be O(n2). The sort function has a time complexity of O(n logn) and the last for loop has time complexity of O(n). Thus, the overall time-complexity of Part A will be O(n2 + n logn + n + 1) => O(n2)
+Part B
+The list comprehension takes O(n) time. The first for loop has O(n) time complexity. The second nested for-loops has a complexity of O(n2) as both for loop individually contribute time complexity of O(n). The per_call calculation takes a constant time thus O(1). The overall time complexity will be O(n2).
+Whole task 3 will have time complexity of O(n2).
+
+Task 4:
+The list comprehension takes O(n) time. The set function uses hash map which has a constant time complexity. Thus the time complexity of whole telemarketers list will be O(1).The clean_list code also run for O(n2) time with the for loop and if statement both contributing O(n) time complexity while the sort function takes O(n logn) time. Finally, the for loop containing the print statement runs for O(n) time. Thus the overall worst-case time complexity is O(n2 + n log n +  n + 1). => O(n2)
